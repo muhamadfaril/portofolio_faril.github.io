@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="dark-mode">
+  <center>
+    <button type="button" class="btn btn-dark" onclick="darkmode()"> Dark Mode</button>
+    <h2>LUAS BANGUN DATAR</h2>
+    <form class="row g-3">
+      <div class="container" style="border-radius:10px;">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Luas Persegi</label>
+          <input type="number" class="form-control" id="s" placeholder="Masukkan Sisi">
+        </div>
+        <button type="button" class="btn btn-primary " onclick="persegi()">Hitung</button>
+        <label for="inputEmail4" class="form-label">Luas Persegi  : <label for="inputEmail4" class="form-label"
+            id="persegi"></label></label>
+      </div>
+
+      <div class="container" style="border-radius:10px;">
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Luas Persegi Panjang</label>
+          <input type="number" class="form-control" id="p" placeholder="Masukkan Panjang">
+        </div>
+        <div class="col-md-6">
+          <input type="number" class="form-control" id="l" placeholder="Masukkan Lebar">
+        </div>
+        <button type="button" class=" btn btn-primary " onclick="persegi_panjang()">Hitung</button>
+        <label for="inputEmail4" class="form-label">Luas Persegi Panjang  : <label for="inputEmail4" class="form-label"
+          id="persegi_panjang"></label></label>
+      </div>
+      <br>
+      <div class="container" style="border-radius:10px;">
+        <div class="col-md-6">
+          <label for="inputAddress" class="form-label">Luas Segitiga</label>
+          <input type="number" class="form-control" id="a" placeholder="Masukkan Alas">
+          <input type="number" class="form-control" id="t" placeholder="Masukkan Tinggi">
+          <button type="button" class="btn btn-primary " onclick="segitiga()">Hitung</button>
+          <label for="inputEmail4" class="form-label">Luas Segitiga : <label for="inputEmail4" class="form-label"
+            id="segitiga"></label></label>
+        </div>
+      </div>
+      <div class="container" style="border-radius:10px ;">
+        <div class="col-md-6">
+          <label for="inputAddress2" class="form-label">Luas Lingkaran </label>
+          <input type="number" class="form-control" id="r" placeholder="Masukkan Jari-jari">
+          <button type="button" class=" btn btn-primary " onclick="lingkaran()">Hitung</button>
+          <label for="inputEmail4" class="form-label">Luas Lingkaran : <label for="inputEmail4" class="form-label"
+            id="lingkaran"></label></label>
+        </div>
+      </div>
+      </div>
+  </center>
+</body>
+
+<script>
+  function persegi() {
+    const s = document.getElementById("s").value;
+    var luas = s * s;
+    var persegi = document.getElementById('persegi')
+    persegi.innerHTML = luas;
+
+  }
+
+  function persegi_panjang() {
+    const p = document.getElementById("p").value;
+    const l = document.getElementById("l").value;
+    var luas = p * l;
+    var persegi_panjang = document.getElementById('persegi_panjang')
+    persegi_panjang.innerHTML = luas;
+
+  }
+
+  function segitiga() {
+    const a = document.getElementById("a").value;
+    const t = document.getElementById("t").value;
+    var luas =(a * t) / 2;
+    var segitiga = document.getElementById("segitiga")
+    segitiga.innerHTML = luas;
+  }
+
+  function lingkaran() {
+    const r = document.getElementById("r").value;
+    var luas = "" +3.14 * r * r;
+    var lingkaran = document.getElementById("lingkaran")
+    lingkaran.innerHTML = luas;
+  }
+  function darkmode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+</script>

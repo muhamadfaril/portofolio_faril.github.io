@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fungsi Output Javascript</title>
+</head>
+<body>
+    <button onclick="Killme()">Kill Me</button>
+   
+    <button onclick="loveme()">loveme</button>
+    <h1 id="p"></h1>
+    <h1 id="p"></h1>
+</body>
+<script>
+   //contoh mencetak di bawah tombol klill
+   var hasil = document.getElementById('p')
+   var hasil2 = document.getElementById('p1')
+
+function loveme(){
+    hasil.innerHTML = "hasil dari inputan loveme";  
+}
+ 
+function Killme(){
+    hasil.innerHTML = "hasil dari inputan killme";  
+}
+    
+</script>
+</html>
+<body>
+    <select id="nama" onchange="tampil()">
+     <option value="udin">samsudin</option>
+     <option value="jidan">habib jidan</option>
+     <option value="anya">anya geraldine</option>
+    </select>
+    <h1 id="output_select"></h1>
+    <script>
+      var ferdi = document.getElementById('Ferdi');
+      var anya = document.getElementById('anya');
+      var nama = document.getElementById('nama');
+      var output_select = document.getElementById('output_select');
+      function tampil(){
+        if(nama.value == "udin"){
+            output_select.innerHTML ="hooh tenan";
+        }else if (nama.value == "jidan") {
+            output_select.innerHTML ="ente kadang-kadang";
+
+        }else if (nama.value == "anya") {
+            output_select.innerHTML ="aku cinta anya";
+      }
+    }
+    </script>
+</body>
+</html>

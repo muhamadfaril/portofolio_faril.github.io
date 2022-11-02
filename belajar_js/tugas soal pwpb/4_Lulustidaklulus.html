@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mengecek Kelulusan</h1>
+    <input type="number" id="nilaiX" placeholder="Masukkan nilai ">
+    <button onclick="bandingkan()">Cek</button>
+    <script>
+    function bandingkan() {
+        var x = document.getElementById  ('nilaiX').value;
+        if (x>=75 && x<=100) {
+            alert("Lulus")
+        } else if (x<=74) {
+            alert("Tidak lulus")
+        }
+    }
+    </script>
+</body>
+</html>

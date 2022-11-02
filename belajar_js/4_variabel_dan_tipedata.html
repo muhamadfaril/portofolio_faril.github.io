@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=10px, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  Nama : <div id="name"></div>
+  <br>
+  Umur : <div id="umur"></div>
+  <br>
+  Status : <div id="status" ></div>
+  
+  <br>
+  Link Instagram : <a id="instagram" >Klik ME <a>
+
+   <script>
+    //menampung variabel
+    var id_name = document.getElementById("name");
+    var id_umur = document.getElementById("umur");
+    var id_status = document.getElementById("status");
+    var id_instagram = document.getElementById("instagram");
+
+         // membuat variabel
+        var name = "Faril";
+        var umur = 15;
+        var status = "Jomblo";
+        var instagram = "https://www.instagram.com/farilmaxx/?hl=id";
+        
+        id_name.innerHTML = name;
+        id_umur.innerHTML = umur + "tahun";
+        id_status.innerHTML = status ;
+        id_instagram.innerHTML = instagram;
+    </script>
+</body>
+</html>

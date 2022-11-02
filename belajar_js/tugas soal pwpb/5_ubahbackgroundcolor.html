@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+    <style>
+        .white-bg{
+            background-color: white;
+            
+        }
+        .black-bg{
+            background-color: black;
+        }
+        .red-bg{
+            background-color: red;
+        }
+    </style>
+    <h1 style="font-family: 'Courier New', Courier, monospace;">Mengubah Background Color</h1>
+   <select name="" id="ubah background" onchange="ubah()">
+       <option value="hitam">Putih</option>
+       <option value="biru">Hitam</option>
+       <option value="ungu">Merah</option>
+    </select>
+    <h1></h1>
+
+<script>
+  function ubah(){
+    var pilihan = document.getElementById("ubah background").value;
+    console.log(pilihan);
+    var body = document.body;
+    if(pilihan =="hitam"){
+        body.classList = 'white-bg';
+    }else if (pilihan == "biru"){
+        body.classList = "black-bg"
+    }else{
+        body.classList = "red-bg"
+    }
+  }
+</script>
+</center>
+</html>
